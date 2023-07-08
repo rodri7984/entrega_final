@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.h{
+    min-height: 100vh;
+ }
+
+ .titulo-foto {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #336ED6 !important;
+    font-size: 70px ;
+ }
+ 
+ #foto-fondo{
+     background: url(https://media.gq.com.mx/photos/6317aa645a0f58b02a754b82/4:3/w_2664,h_1998,c_limit/ropa-basicos-para-hombre-de-otono-2022-para-hacer-ejercicio-con-estilo.jpg);
+     background-size: cover;
+     background-position: top;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+ }
+ 
+ #categorias{
+     min-height: 100vh;
+ }
+
+ .texto-card{
+    font-family: 'Lato', sans-serif;
+ }
+ 
+ #espacio {
+     min-height: 10vh
+ }
+ 
+ #logos {
+     min-height: 20vh;
+ }
+
+ /* style footer y carro*/
+
+
+ * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('fondo.jpg');
+}
+
+.icon-carrito{
+    font-size: 8px;
+}
+
+.container h1{
+    text-align: center;
+    color: #0d66be;
+}
+
+.grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,280px));
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: #fff;
+    border: solid thin #e1e1e1;
+}
+
+.items img {
+    width: 100%;
+    height: 210px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 1.8 rem;
+}
+
+.info p {
+    color: #222;
+    font-size: 1.2 rem;
+    margin-bottom: 15px;
+}
+
+.precio p {
+    font-size: 1.6 rem;
+}
+
+.info button {
+    padding: 1rem;
+    width: 130px;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1 rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left: 60px;
+}
+
+.info button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+.nav-item a {
+    padding: 15px;
+}
+
+.nav-item i {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #ffff;
+    padding-right: 10px;
+}
+
+.nav-card {
+    display: none;
+}
+
+
+.nav-card li {
+    list-style: none;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #0e0d0d;
+}
+
+.nav-item button {
+    display: none;
+}
+
+.nav-item i:hover .buy-card button {
+    display:block;
+    width:90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494948;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-top: 290px;
+}
+
+.nav-item i:hover .buy-card > button:hover {
+    border: solid thin #494848;
+    transition: all .4;
+}
+
+.nav-item i:hover > .buy-card {
+    width: 490px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: #ffff;
+   
+
+}
+
+.nav-item i:hover .nav-card {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid thin #0e0d0d;
+}
+
+.form-register {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: #24303c;
+    padding: 40px;
+    margin: auto;
+    font-family: 'calibri';
+    color: white;
+}
+
+.pagos {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: #24303c;
+    padding: 40px;
+    margin: auto;
+    font-family: 'calibri';
+    color: white;
+}
+
+.pagos h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-register a:hover {
+    color: white;
+}
+
+.form-register button {
+    padding: 0.5rem;
+    width: 100px;
+    max-width: 1200%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    background-color: #33c3f0;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1 rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+.grupo-1 a{
+    text-decoration: solid;
+    color: white;
+    border: none;
+    outline-style: none;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+    .form-register button {
+        padding: 35px 0px;
+        width: 100px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+}

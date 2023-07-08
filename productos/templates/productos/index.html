@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damairo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'productos/css/style.css' %}">
+    <!-- fonts google -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+  </head>
+<body>
+   <!-- Inicio navBar -->
+   <nav class="navbar navbar-expand-lg navbar-light navbar-toggleable-sm bg-dark scrolling-navbar fixed-top ">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h3 class="text-white ">DaMaiRo</h3>
+    <a class="navbar-brand text-white  " href="index.html"><img
+        src="https://i.pinimg.com/564x/83/dc/f4/83dcf405fb8bb8f92866f212bc310f8a.jpg" class="img-fluid" width="50px"
+        height="50px" alt=""></a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ml-auto text-center" id="navbarNav">
+        <a class="nav-item nav-link text-white active" href="{% url 'index' %}">Inicio</a>
+        <a class="nav-item nav-link text-white" href="{% url 'tienda' %}">Ropa</a>
+        <a class="nav-item nav-link text-white" href="{% url 'carrito' %}">Mi Carro</a>
+        <a class="nav-item nav-link text-white" href="login.html">Inicia Sesion</a>
+        <a class="nav-item nav-link text-white" href="{% url 'inicio' %}">Admin</a>
+
+
+      </div>
+    </div>
+  </nav>
+  <!-- Fin navBar -->
+<section id="foto-fondo" >
+    <div class="container">
+        <div class="row h align-items-center">
+            <div class="col-sm-6 col-md-9">
+                <h1 class="text-left titulo-foto ">Damairo</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fin Foto principal   -->
+<!-- Inicio Titulo categorias -->
+<section id="categorias" class="bg-white">
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-11">
+                <h1 class="text-right mb-5 mt-5 ">Damairo Categorias</h1>
+            </div> 
+        </div>
+    </div>
+<!-- Fin Titulo categorias -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3 text-left">
+                <h4 class="ml-5  mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a, exercitationem deleniti nostrum sint officia hic laudantium neque cum placeat? Laboriosam, odit omnis. Ut repellendus distinctio dolor, quaerat deleniti et.</h4>
+            </div>
+        <!-- Inicio cards -->
+            <div class="col-sm-8 col-md-8 col-lg-8 bg-white ">
+                <div class="d-flex justify-content-center align-items-center  mt-5 mb-5 texto-card ">
+                    <div class="card mr-3  " >
+                      <img class=" w-200 h-300" src="https://contents.mediadecathlon.com/p1882588/k$77af8b3d3ced07f10ed1e8c94b69a38f/sosten-deportivo-fbra900-azulslashrosado.jpg?format=auto&quality=40&f=800x800"  alt="...">
+                      <a href="productos/tienda.html" class="btn btn-light"># Ropa</a>  
+                    </div>
+        
+                    <div class="card mr-3 width= 270 height= 370" >
+                      <img src="https://contents.mediadecathlon.com/p1648021/k$52693729bdfdd51a3ad78a8b18d7294a/camiseta-calida-manga-larga-senderismo-sh100-warm-hombre.jpg?format=auto&quality=40&f=800x800" class="card-img-top" alt="...">
+    
+                      <a href="productos/tienda.html" class="btn btn-light"># Ropa</a>
+                          
+                    </div>
+                    
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+        <!-- Fin cards -->
+ <!-- Fin categorias --> 
+
+ <!-- Inicio ropa unica -->
+<section>
+  <div id="logos" class="d-flex align-items-center justify-content-center bg-white " >
+    <div class="row text-center ">
+      <div class="col-sm-8 col-md-3   ">
+        <h4><i class="bi bi-lightning  "></i> Ropa unica</h4>
+        <h6>De calidad</h6>
+      </div>
+      <div class="col-sm-8 col-md-3 ">
+        <h4><i class="bi bi-cursor-fill "></i> Envios gratis </h4>
+        <h6 class="text-center">Con compras sobre los $30.000</h6>
+      </div>
+      <div class="col-sm-8 col-md-3  ">
+        <h4><i class="bi bi-telephone-fill "></i> Soporte al cliente</h4>
+        <h6 class="text-center">Soporte 24/7</h6>
+      </div>
+      <div class="col-sm-8 col-md-3  ">
+        <h4><i class="bi bi-file-earmark-lock2"></i> Compra segura</h4>
+        <h6 class="text-center">Compra 100% segura</h6>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Fin ropa unica -->
+<section>
+  <div id="espacio" class="div bg-white">
+    <div class="row">
+      <div class="col">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inicio footer -->
+<div class="section bg-dark">
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <a href="#">
+          <h1>DaMaiRo</h1>
+        </a>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <a href="#" class="bi bi-facebook"></a>
+          <a href="#" class="bi bi-instagram"></a>
+          <a href="#" class="bi bi-twitter"></a>
+          <a href="#" class="bi bi-youtube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2023 <b>DaMaiRo</b> - Todos los Derechos Reservados.</small>
+    </div>
+  </footer>
+</div>
+<!-- Fin footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>    
+</body>
+</html>

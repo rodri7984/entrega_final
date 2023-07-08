@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'productos/css/edit.css' %}">
+
+</head>
+<body>
+
+   <!-- Inicio navBar -->
+   <nav class="navbar navbar-expand-lg navbar-light navbar-toggleable-sm bg-dark scrolling-navbar ">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h3 class="text-white ">DaMaiRo</h3>
+    <a class="navbar-brand text-white  " href="index.html"><img
+        src="https://i.pinimg.com/564x/83/dc/f4/83dcf405fb8bb8f92866f212bc310f8a.jpg" class="img-fluid" width="50px"
+        height="50px" alt=""></a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ml-auto text-center" id="navbarNav">
+        <a class="nav-item nav-link text-white active" href="{% url 'index' %}">Inicio</a>
+        <a class="nav-item nav-link text-white" href="{% url 'tienda' %}">Ropa</a>
+        <a class="nav-item nav-link text-white" href="{% url 'carrito' %}">Mi Carro</a>
+        <a class="nav-item nav-link text-white" href="login.html">Inicia Sesion</a>
+        <a class="nav-item nav-link text-white" href="{% url 'productosList' %}">Admin</a>
+
+
+      </div>
+    </div>
+  </nav>
+  <!-- Fin navBar -->
+    <div class="container">
+        <div><h1>Modificar producto</h1></div>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <input type="submit" class="btn btn-danger" id="actualizar" value="Actualizar">
+            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+            {% if mensaje %}
+                <div id="error" class="alert alert-success" role="alert">
+                    {{mensaje}}
+                </div>
+            {% endif %}
+        </form>
+        <a href="{% url 'productosList' %}">Volver</a>
+    </div>
+    
+</body>
+</html>

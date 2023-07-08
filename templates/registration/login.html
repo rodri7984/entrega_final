@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'productos/css/home.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="text-center mt-5">Log in</h3>
+        <form method="post" class="mt-4 text-center">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-primary btn-block ">Log in</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-M2tTs5VrY2F4iuXsnwka5EumD2vMSfExrKL3AHTbJOO0yL/rz5q+8zR/KujzO/7Y"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-wjP7fPmsSCUTeEKIlYvJMcViOaEt4ycmk+4e9O9h7Q2ihpbXq12skCM2/QZzJg9m"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

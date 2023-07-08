@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Inicio navBar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-toggleable-sm bg-dark scrolling-navbar fixed-top ">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h3 class="text-white ">DaMaiRo</h3>
+      <a class="navbar-brand text-white  " href="index.html"><img
+          src="https://i.pinimg.com/564x/83/dc/f4/83dcf405fb8bb8f92866f212bc310f8a.jpg" class="img-fluid" width="50px"
+          height="50px" alt=""></a>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ml-auto text-center" id="navbarNav">
+          <a class="nav-item nav-link text-white active" href="{% url 'index' %}">Inicio</a>
+          <a class="nav-item nav-link text-white" href="{% url 'tienda' %}">Ropa</a>
+          <a class="nav-item nav-link text-white" href="{% url 'carrito' %}">Mi Carro</a>
+          <a class="nav-item nav-link text-white" href="login.html">Inicia Sesion</a>
+          <a class="nav-item nav-link text-white" href="{% url 'productosList' %}">Admin</a>
+  
+  
+        </div>
+      </div>
+    </nav>
+    <!-- Fin navBar -->
+    <div class="container">
+        <h1>Tienda</h1>
+        <div class="row">
+            {% for producto in productos %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ MEDIA_URL }}{{ producto.imagen.url }}" class="card-img-top" alt="...">
+
+
+                        <h5 class="card-title">{{ producto.nombre_prod }}</h5>
+                        <p class="card-text">Marca: {{ producto.marca }}</p>
+                        <p class="card-text">Talla: {{ producto.talla }}</p>
+                        <p class="card-text">Color: {{ producto.color }}</p>
+                        <p class="card-text">Precio: ${{ producto.precio }}</p>
+                        
+                        <a href="{% url 'Add' producto.id_prod %}" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-4">
+                {% include "productos\carrito.html" %}
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Agrega el enlace al archivo JS de Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+</body>
+</html>
